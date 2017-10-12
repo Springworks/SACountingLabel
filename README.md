@@ -47,7 +47,7 @@ Or add it to your storyboard or XIB file and set the class type to `SACountingLa
 This is the general syntax for counting from a start value to an end value for a specified counting and animation style.
 
 ```swift
-label.countFrom(0, to: 100, withDuration: 1.0, andAnimationType: .EaseIn, andCountingType: .Int)
+label.countFrom(0, to: 100, withDuration: 1.0, andAnimationType: .easeIn, andCountingType: .int)
 ```
 
 #### Start Value

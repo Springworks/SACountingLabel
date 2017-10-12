@@ -25,24 +25,24 @@ class ViewController: UIViewController {
     }
     
     func countForAnimationType(type: SACountingLabel.AnimationType) {
-        intLabel.countFrom(0, to: 349, withDuration: NSTimeInterval(durationSlider.value), andAnimationType: type, andCountingType: .Int)
+        intLabel.countFrom(0, to: 349, withDuration: NSTimeInterval(durationSlider.value), andAnimationType: type, andCountingType: .int)
         
-        floatLabel.countFrom(0, to: 1.0, withDuration: NSTimeInterval(durationSlider.value), andAnimationType: type, andCountingType: .Float)
+        floatLabel.countFrom(0, to: 1.0, withDuration: NSTimeInterval(durationSlider.value), andAnimationType: type, andCountingType: .float)
         
-        customLabel.countFrom(0, to: 100.0, withDuration: NSTimeInterval(durationSlider.value), andAnimationType: type, andCountingType: .Custom)
+        customLabel.countFrom(0, to: 100.0, withDuration: NSTimeInterval(durationSlider.value), andAnimationType: type, andCountingType: .custom)
         customLabel.format = "%.1f%%"
     }
     
     @IBAction func buttonSelected(sender: AnyObject) {
         switch sender.tag {
         case 0:
-            countForAnimationType(.Linear)
+            countForAnimationType(.linear)
         case 1:
-            countForAnimationType(.EaseIn)
+            countForAnimationType(.easeIn)
         case 2:
-            countForAnimationType(.EaseOut)
+            countForAnimationType(.easeOut)
         case 3:
-            countForAnimationType(.EaseInOut)
+            countForAnimationType(.easeInOut)
         default:
             break
         }
