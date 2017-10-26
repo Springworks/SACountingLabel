@@ -66,7 +66,7 @@ public class SACountingLabel: UILabel {
         }
         
         // Create timer
-        timer = Timer.scheduledTimer(timeInterval: 0.01, target: self, selector: Selector(("updateValue")), userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: 0.01, target: self, selector: #selector(updateValue), userInfo: nil, repeats: true)
     }
     
     func updateText(_ value: Float) {
@@ -84,7 +84,7 @@ public class SACountingLabel: UILabel {
         }
     }
     
-    func updateValue() {
+    @objc func updateValue() {
         
         // Update the progress
         let now = NSDate.timeIntervalSinceReferenceDate
